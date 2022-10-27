@@ -10,7 +10,7 @@ This is the terraform version of trey-research architecture that does not exist 
 
 Infrastructure becomes increasingly complex, multiple open source project offers layers on top of Terraform to simplify the complexity of installation but they do bring their fair share of complexity themselves as it requires additionnal training for your team, more layer to secure  and may create some difficulties to customize the template base.
 
-This project intends to go back to the basics of Terraform and Infrastructure and show the most simple of both so that it can be easy to learn from it and customize it. 
+This project intends to go back to the basics of Terraform and Infrastructure and show __the most simple__ of both so that it can be __easy to learn from it and customize it__. 
 
 ## Customer profile
 
@@ -43,6 +43,16 @@ terraform apply -var-file="testing.tfvars" -destroy
 
 ## Industrialize
 
+Manual is cool to start with but we are facing multiple problems : 
+- Governance : What is the company is going to do when you are on vacation
+- Security : How can we improve security on our password secrets at least
+- Monitoring : how to troubleshot and keep historization of our change
+
+To stick to our __minimum viable product__, the intent here is to :
+- Use a CICD pipeline to execute terraform actions
+- Save Terraform state within an Azure Storage Account
+
+### Steps :
 __[section in progress]__
 
 Notice : We add an Azure storage account for state management and a service principal that is going to execute terraform. This makes the execution possible within a CICD pipeline.

@@ -4,7 +4,7 @@
 
 This is the terraform version of trey-research architecture that does not exist in the official repo.
 
-![Trey-research-schema](docs\trey-research-schema.png)
+![Trey-research-schema](docs/trey-research-schema.png)
 
 ## Motivation
 

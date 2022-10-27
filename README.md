@@ -4,6 +4,8 @@
 
 This is the terraform version of trey-research architecture that does not exist in the official repo.
 
+This should be considered as training material for small Azure terraform infrastructure.
+
 ![Trey-research-schema](docs/trey-research-schema.png)
 
 ## Motivation
@@ -50,7 +52,7 @@ Manual is cool to start with but we are facing multiple problems :
 
 To stick to our __minimum viable product__, the intent here is to :
 - Use a CICD pipeline to execute terraform actions
-- Save Terraform state within an Azure Storage Account
+- Save terraform state within an Azure Storage Account
 
 ### Steps :
 __[section in progress]__

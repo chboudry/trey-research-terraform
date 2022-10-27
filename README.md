@@ -11,16 +11,23 @@ This reference implementation provides a design path and initial technical state
 This reference implementation is also well suited for customers who want to start with Landing Zones for their net new deployment/development in Azure by implementing a network architecture based on the traditional hub and spoke network topology.
 
 ## Try locally
+
 az login
-az account set --subscription "35akss-subscription-id"
+
+az account set --subscription "subscription-id"
+
 terraform init
-terraform plan test
-terraform apply plan test
+
 terraform apply -var-file="testing.tfvars"
 
 ## industrialize
+
 az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<SUBSCRIPTION_ID>"
+
 $ $Env:ARM_CLIENT_ID = "<APPID_VALUE>"
+
 $ $Env:ARM_CLIENT_SECRET = "<PASSWORD_VALUE>"
+
 $ $Env:ARM_SUBSCRIPTION_ID = "<SUBSCRIPTION_ID>"
+
 $ $Env:ARM_TENANT_ID = "<TENANT_VALUE>"

@@ -16,9 +16,9 @@ provider "azurerm" {
 
 module "platform" {
   source                                   = "./platform"
+  company_prefix                           = var.company_prefix
   location                                 = var.location
   TreyResearch-mgmt-rg-name                = var.plaform_mgmt_rg_name
   TreyResearch-connectivity-rg-name        = var.plaform_connectivity_rg_name
   TreyResearch-identity-rg-name            = var.plaform_identity_rg_name
-  
 }

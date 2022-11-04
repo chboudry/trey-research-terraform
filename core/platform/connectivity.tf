@@ -19,6 +19,13 @@ resource "azurerm_subnet" "identity" {
     address_prefixes       = ["10.10.3.0/24"]
 }
 
+resource "azurerm_subnet" "bastion" {
+    name                 = "AzureBastionSubnet"
+    resource_group_name  = azurerm_resource_group.rg-platform-connectivity.name
+    virtual_network_name = azurerm_virtual_network.hub.name
+    address_prefixes       = ["10.10.4.0/24"]
+}
+
 # Public IP For Azure Firewall
 resource "azurerm_public_ip" "firewall-pip" {
   name                = "firewall-pip"
